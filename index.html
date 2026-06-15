@@ -1,232 +1,101 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+
+ <!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exotic Wheels | Carros Exclusivos</title>
+    <title>Blog</title>
     <style>
-        :root {
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            --accent-color: #ff3333;
-            --text-color: #ffffff;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-        }
-
         header {
-            background-color: #000;
-            padding: 20px;
+            background-color: #007bff;
+            color: #FFFFFF;
             text-align: center;
-            border-bottom: 2px solid var(--accent-color);
-        }
-
-        .search-container {
             max-width: 800px;
-            margin: 20px auto;
+            margin: 0 auto;
+            padding: 16px;
+            border: 5px solid #cf1010;
+        }
+
+        main {
+            background-color: #FFFFFF;
+            color: #007bff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        article {
             display: flex;
-            gap: 10px;
-            padding: 0 20px;
         }
 
-        .search-container input, .search-container select {
-            flex: 1;
-            padding: 12px;
-            border-radius: 5px;
-            border: none;
-            background-color: var(--card-bg);
-            color: white;
+        img {
+            width: 80px;
+            height: 80px;
         }
 
-        .catalog {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .car-card {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            transition: transform 0.3s;
-        }
-
-        .car-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .car-image-container {
-            position: relative;
-            height: 200px;
-            background-color: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .car-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .car-info {
-            padding: 20px;
-        }
-
-        .car-category {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            color: var(--accent-color);
+        .artigo-autor {
             font-weight: bold;
-        }
-
-        .car-title {
-            margin: 5px 0 10px 0;
-            font-size: 1.5rem;
-        }
-
-        .car-price {
-            font-size: 1.3rem;
-            color: #2ecc71;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .color-picker {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            align-items: center;
-        }
-
-        .color-dot {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            cursor: pointer;
-            border: 2px solid white;
-        }
-
-        .btn-negotiate {
-            display: block;
-            text-align: center;
-            background-color: var(--accent-color);
-            color: white;
-            text-decoration: none;
-            padding: 12px;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.2s;
-        }
-
-        .btn-negotiate:hover {
-            background-color: #cc0000;
         }
     </style>
 </head>
+
 <body>
-
     <header>
-        <h1>Veloce Club</h1>
-        <p>Carros raros, superesportivos e colecionáveis</p>
+
+        <h1>Meu blog tech</h1>
+        <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
     </header>
-
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Pesquise por marca ou modelo...">
-        <select id="categoryFilter">
-            <option value="todos">Todas as Categorias</option>
-            <option value="superesportivo">Superesportivos</option>
-            <option value="classico">Clássicos Raros</option>
-            <option value="custom">Custom / Hot Rod</option>
-        </select>
-    </div>
-
-    <main class="catalog">
-        
-        <div class="car-card" data-categoria="superesportivo">
-            <div class="car-image-container">
-                <img id="car1-img" class="car-image" src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=500" alt="Superesportivo">
+    <main>
+        <article>
+            <img src="imagem-blog.png"
+                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado pro ícones de Wi-fi, circuitos e lâmpada de ideia. Cores em tons de azul e brando.">
+            <div>
+                <h2>Meu primeiro post</h2>
+                <p class="artigo-autor">Por: Gabriel Alexandre</p>
+                <p>Boas-Vintas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de
+                    tecnologia.</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
             </div>
-            <div class="car-info">
-                <span class="car-category">Superesportivo</span>
-                <h3 class="car-title">bugatti veyron 2015</h3>
-                <div class="car-price">R$ 10.000.000</div>
-                
-                <p style="font-size: 0.9rem; margin-bottom: 5px;">Escolha a cor do veículo:</p>
-                <div class="color-picker">
-                    <div class="color-dot" style="background-color: #ff3333;" onclick="changeColor('car1-img', 'https://www.motor1.com/news/789908/bugatti-restores-sells-veyron-prototype/)"></div>
-                    <div class="color-dot" style="background-color: #3333ff;" onclick="changeColor('car1-img', 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=500')"></div>
-                    <div class="color-dot" style="background-color: #00ff00;" onclick="changeColor('car1-img', 'https://images.unsplash.com/photo-1611245801097-453d6e270012?w=500')"></div>
-                </div>
-
-                <a href="https://wa.me/SEUNUMERO?text=Tenho%20interesse%20no%20Phantom%20Concept" target="_blank" class="btn-negotiate">Negociar Proposta</a>
+        </article>
+        <article>
+            <img src="imagem-blog.png"
+                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado pro ícones de Wi-fi, circuitos e lâmpada de ideia. Cores em tons de azul e brando.">
+            <div>
+                <h2>Meu segundo post</h2>
+                <p class="artigo-autor">Por: MARCELO VINICIUS</p>
+                <p>Boas-Vintas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de
+                    tecnologia.</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
             </div>
-        </div>
-
-        <div class="car-card" data-categoria="classico">
-            <div class="car-image-container">
-                <img id="car2-img" class="car-image" src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=500" alt="Clássico">
-            </div>
-            <div class="car-info">
-                <span class="car-category">Clássicos Raros</span>
-                <h3 class="car-title">Vintage Roadster 1968</h3>
-                <div class="car-price">R$ 850.000</div>
-                
-                <p style="font-size: 0.9rem; margin-bottom: 5px;">Escolha a cor do veículo:</p>
-                <div class="color-picker">
-                    <div class="color-dot" style="background-color: #f1c40f;" onclick="changeColor('car2-img', 'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=500')"></div>
-                    <div class="color-dot" style="background-color: #ffffff;" onclick="changeColor('car2-img', 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=500')"></div>
-                </div>
-
-                <a href="https://wa.me/SEUNUMERO?text=Tenho%20interesse%20no%20Vintage%20Roadster" target="_blank" class="btn-negotiate">Negociar Proposta</a>
-            </div>
-        </div>
-
+        </article>
     </main>
-
-    <script>
-        // Função para simular a troca de cor mudando a imagem
-        function changeColor(imageId, imageUrl) {
-            document.getElementById(imageId).src = imageUrl;
-        }
-
-        // Lógica simples de pesquisa e filtro
-        const searchInput = document.getElementById('searchInput');
-        const categoryFilter = document.getElementById('categoryFilter');
-        const cards = document.querySelectorAll('.car-card');
-
-        function filterCars() {
-            const searchText = searchInput.value.toLowerCase();
-            const selectedCategory = categoryFilter.value;
-
-            cards.forEach(card => {
-                const title = card.querySelector('.car-title').innerText.toLowerCase();
-                const category = card.getAttribute('data-categoria');
-                
-                const matchesSearch = title.includes(searchText);
-                const matchesCategory = selectedCategory === 'todos' || category === selectedCategory;
-
-                if (matchesSearch && matchesCategory) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        searchInput.addEventListener('input', filterCars);
-        categoryFilter.addEventListener('change', filterCars);
-    </script>
 </body>
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            if (curtiu === false) {
+                texto.textContent++;
+                curtiu = true;
+            } else {
+                texto.textContent--;
+                curtiu = false;
+
+            }
+
+        }
+
+    })
+
+
+</script>
+
 </html>
